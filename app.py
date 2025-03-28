@@ -15,6 +15,11 @@ from authentication import authenticate
 # Initialize database
 init_db()
 
+@app.route("/")
+def home():
+    return "Mini Query Engine is running!", 200
+
+
 # /query endpoint
 @app.route("/query", methods=["POST"])
 def query():
